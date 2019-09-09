@@ -54,3 +54,34 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.O {
+  width: 36px;
+  height: 36px;
+  margin: 29px;
+  border: 3px solid #2d4558;
+  border-radius: 50%
+}
+
+.X {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 20.5px;
+  margin-left: -1.5px
+}
+.X:after {
+  content: '';
+  height: 59px;
+  border-left: 3px solid #2d4558;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.X:before {
+  content: '';
+  height: 59px;
+  border-left: 3px solid #2d4558;
+  position: absolute;
+  transform: rotate(-45deg);
+}

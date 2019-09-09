@@ -2,9 +2,9 @@ import React from "react";
 
 function Square(props) {
   return (
-    <button className="square" onClick={props.onClick}>
-      {props.value}
-    </button>
+    <div className="square" onClick={props.onClick}>
+      <div className={props.value}></div>
+    </div>
   );
 }
 
@@ -41,19 +41,19 @@ class Board extends React.Component {
   render() {
     return (
       <div>
-        <div class="title">Tic Tac Toe</div>
-        <div class="grid">
-          <div class="board-row">
+        <div className="title">Tic Tac Toe</div>
+        <div className="grid">
+          <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
             {this.renderSquare(2)}
           </div>
-          <div class="board-row">
+          <div className="board-row">
             {this.renderSquare(3)}
             {this.renderSquare(4)}
             {this.renderSquare(5)}
           </div>
-          <div class="board-row">
+          <div className="board-row">
             {this.renderSquare(6)}
             {this.renderSquare(7)}
             {this.renderSquare(8)}
