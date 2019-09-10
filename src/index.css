@@ -85,3 +85,18 @@ body {
   position: absolute;
   transform: rotate(-45deg);
 }
+
+button {
+  width: 200px;
+  height: 60px;
+  display: block;
+  margin: 32px auto;
+  background-color: #2d4558;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

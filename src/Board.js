@@ -11,10 +11,19 @@ function Square(props) {
 class Board extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = this.getInitialState();
+  }
+
+  getInitialState = () => {
+    const initialState = {
       squares: Array(9).fill(null),
       xIsNext: true
-    };
+    }
+    return initialState
+  }
+
+  resetState = () => {
+    this.setState(this.getInitialState());
   }
 
   handleClick(i) {
@@ -59,10 +68,13 @@ class Board extends React.Component {
             {this.renderSquare(8)}
           </div>
         </div>
+        <button onClick={this.resetState}>New Game</button>
       </div>
     );
   }
 }
+
+
 
 function calculateWinner(squares) {
   const lines = [
