@@ -18,13 +18,13 @@ class Board extends React.Component {
     const initialState = {
       squares: Array(9).fill(null),
       xIsNext: true
-    }
-    return initialState
-  }
+    };
+    return initialState;
+  };
 
   resetState = () => {
     this.setState(this.getInitialState());
-  }
+  };
 
   handleClick(i) {
     const squares = this.state.squares.slice();
@@ -73,8 +73,6 @@ class Board extends React.Component {
     );
   }
 }
-
-
 
 function calculateWinner(squares) {
   const lines = [
